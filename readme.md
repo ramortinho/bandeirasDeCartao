@@ -15,7 +15,7 @@ GITHUB-COPILOT
 ## Instruções de Configuração
 1. Clone o repositório:
    ```
-   git clone <repository-url>
+   git clone https://github.com/ramortinho/bandeirasDeCartao.git
    ```
 2. Navegue até o diretório do projeto:
    ```
@@ -30,8 +30,8 @@ GITHUB-COPILOT
    npm start
    ```
 
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+## Contribuindo
+Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir uma issue para quaisquer sugestões ou melhorias.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes (se aplicável).
