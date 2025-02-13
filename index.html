@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Cartão de Crédito</title>
+    <script src="src/index.js" defer></script>
+</head>
+<body>
+    <h1>Validação de Cartão de Crédito</h1>
+    
+    <div>
+        <input type="text" id="generic" placeholder="Digite o número do cartão">
+        <button onclick="validateCard('generic')">Validar Genérico</button>
+    </div>
+    <hr/>
+    <div>
+        <input type="text" id="visa" value="4111111111111111">
+        <button onclick="validateCard('visa')">Validar Visa12</button>
+    </div>
+
+    <div>
+        <input type="text" id="mastercard" value="5324321080659665">
+        <button onclick="validateCard('mastercard')">Validar MasterCard</button>
+    </div>
+        
+    <div>
+        <input type="text" id="amex" value="371449635398431">
+        <button onclick="validateCard('amex')">Validar American Express</button>
+    </div>
+    
+    <div>
+        <input type="text" id="discover" value="6011111111111117">
+        <button onclick="validateCard('discover')">Validar Discover</button>
+    </div>
+    
+    <div>
+        <input type="text" id="hipercard" value="6062825624254001">
+        <button onclick="validateCard('hipercard')">Validar Hipercard</button>
+    </div>
+    
+    <div>
+        <input type="text" id="jcb" value="3530111333300000">
+        <button onclick="validateCard('jcb')">Validar JCB</button>
+    </div>
+    
+    <div>
+        <input type="text" id="diners" value="30569309025904">
+        <button onclick="validateCard('diners')">Validar Diners</button>
+    </div>
+    
+    <div>
+        <input type="text" id="enroute" value="201400000000009">
+        <button onclick="validateCard('enroute')">Validar EnRoute</button>
+    </div>
+    
+    <div>
+        <input type="text" id="voyager" value="869949885466431">
+        <button onclick="validateCard('voyager')">Validar Voyager</button>
+    </div>
+    
+    <div>
+        <input type="text" id="aura" value="5099951473499692">
+        <button onclick="validateCard('aura')">Validar Aura</button>
+    </div>
+
+    <hr/>
+    
+    <p id="result"></p>
+
+    <script>
+        function validateCard(inputId) {
+            const cardNumber = document.getElementById(inputId).value.replace(/\s+/g, '');
+            const cardIssuer = getCardIssuer(cardNumber);
+            const isValid = cardIssuer !== 'Unknown';
+            document.getElementById('result').innerText = `Card Issuer: ${cardIssuer}, Valid: ${isValid}`;
+        }
+    </script>
+</body>
+</html>
